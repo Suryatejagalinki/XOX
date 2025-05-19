@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #c3ecff, #fceabb);
+  text-align: center;
+  padding: 20px;
+}
+.signature {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+.mode-select.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.mode-select button,
+.controls button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 10px;
+  background: #0077ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mode-select button:hover,
+.controls button:hover {
+  background: #005fcc;
+}
+#turnIndicator {
+  margin: 20px 0;
+  font-size: 1.4em;
+  color: #333;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 330px;
+  margin: 0 auto;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cell:hover {
+  background-color: #e0f0ff;
+}
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  animation: pop 0.4s ease-out;
+}
+.popup-content p {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+.popup-content button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@media (max-width: 500px) {
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+  }
+  .popup-content p {
+    font-size: 1.5em;
+  }
+}

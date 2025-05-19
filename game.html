@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XOX - Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="signature">Created by <strong>Suryateja Galinki</strong></div>
+  <h1>XOX - Tic Tac Toe</h1>
+  <h2 id="turnIndicator">Turn: X</h2>
+  <div class="board" id="board"></div>
+  <div class="controls">
+    <button onclick="restartGame()">Restart</button>
+    <button onclick="goToMenu()">Back to Menu</button>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="winnerText"></p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+  <audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1c03303ec2.mp3"></audio>
+  <audio id="winSound" src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_b05ff3ed2e.mp3"></audio>
+  <audio id="drawSound" src="https://cdn.pixabay.com/download/audio/2022/03/25/audio_52fb36cfb2.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
